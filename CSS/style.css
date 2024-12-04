@@ -1,0 +1,298 @@
+/* goggle fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* roots  */
+:root {
+  --red: #f42f2c;
+  --black: #222222;
+  --gray: #777777;
+  --white: #ffffff;
+  --halfwhite : #F9F9FF;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* header  */
+header {
+  background: url("../IMG/hero-bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+/* navbar  */
+nav {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 240px;
+  gap: 50px;
+  padding-top: 20px;
+}
+nav ul {
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  font-weight: 500;
+  color: var(--white);
+  & li {
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  & li:hover {
+    color: var(--red);
+  }
+}
+
+/* hero section  */
+.hero-section {
+  color: var(--white);
+  padding-left: 50px;
+  height: calc(100vh - 240px);
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.hero-section button {
+  width: 200px;
+  padding-block: 15px;
+}
+.hero-section h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+.hero-section p:first-child {
+  font-weight: 300;
+}
+.hero-section button {
+  background: var(--red);
+  border: none;
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* about  */
+.about {
+  display: flex;
+  height: 90vh;
+}
+.about .about-left,
+.about .about-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-left {
+  padding: 40px;
+}
+.about-left p {
+  margin-block: 15px;
+}
+.about-left h1 {
+  font-size: 2rem;
+  color: var(--black);
+}
+.about-left p {
+  color: var(--gray);
+}
+.about-left button {
+  background: var(--red);
+  border: none;
+  color: var(--white);
+  font-weight: bold;
+  padding-block: 15px;
+  width: 200px;
+}
+
+
+
+/* menu */
+
+.menu{
+  background: var(--halfwhite);
+  text-align: center;
+  padding: 80px;
+}
+.menu > h1{
+  font-size: 2.5rem;
+  color: var(--black);
+}
+.menu >p{
+  color: var(--gray);
+}
+
+.option{
+  display: flex;
+  height: 100px;
+  background: var(--white);
+  margin-inline: auto;
+  width: 90%;
+  margin-block: 60px;
+}
+.option .opt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border-right: 1px solid rgba(128, 128, 128, 0.075);
+}
+.option .opt:first-child{
+  background: var(--red);
+  color: var(--white);
+}
+
+.menu-card-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.menu-card{
+  width: 48%;
+  background: var(--white);
+  padding: 30px;
+}
+
+.menu-name{
+  display: flex;
+  justify-content: space-between;
+}
+.menu-name h1{
+  font-size: 20px;
+}
+.menu-card p{
+  margin-top: 10px;
+  color: var(--gray);
+}
+.menu-name p{
+  color: var(--red);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.form{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url("../IMG/reservation-bg.jpg");
+  color: var(--white);
+}
+
+
+.booking{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+
+.form-right form{
+  background: var(--white);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+.form-right form input{
+  padding: 10px;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.form-right form button{
+  padding: 12px 30px;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+}
+
+.form-left h1{
+  font-size: 2rem;
+}
+
+
+/* media query  */
+
+
+/* speech media  */
+/* print media  */
+/* screen media  */
+
+
+@media screen and (max-width : 1000px) {
+  .hero-section{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width : 700px) {
+  .hero-section h1{
+    font-size: 2rem;
+  }
+  .hero-section p:first-child{
+    font-size: 0.9rem;
+  }
+  .hero-section .paragraph{
+    font-size: 0.8rem;
+  }
+  .hero-section button {
+    width: 170px;
+    padding-block: 10px;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+@media screen and  (max-width : 700px) {
+  .hero-section{
+    width: 90%;
+  }
+  .hero-section h1{
+    font-size: 1.5rem;
+  }
+  .hero-section .paragraph{
+    font-size: 0.6rem;
+  }
+  .hero-section button {
+    width: 140px;
+    padding-block: 8px;
+  }
+  nav{
+    height: 100px;
+  }
+  .about{
+    flex-direction: column;
+    min-height: 130vh;
+  }
+  .about .about-left,
+.about .about-right{
+  width: 100%;
+}
+}
